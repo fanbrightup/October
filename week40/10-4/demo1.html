@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var info = '欢迎光临这个跑马灯网站';
+    var interval = 200;
+    var empty = '';
+    sin = 0 ;
+    function Scroll(){
+      document.myForm.myText.value = info.substring(sin,info.length)+empty
+        +info.substring(0,info.length);
+      sin++;
+      sin++;
+      if(sin >= info.length)  sin = 0;
+      window.setTimeout('Scroll();',interval);
+    }
+  </script>
+</head>
+<body onload = "Scroll()">
+  <marquee behavior="slide" direction="left">这是跑马灯这是跑马灯这是跑马灯这是跑
+    马灯这是跑马灯这是跑马灯这是跑马灯这是跑马灯这是跑马灯这是跑马灯</marquee>
+  <form action="" name = "myForm" >
+    <input type="text" name="myText" size="30">
+  </form>
+
+</body>
+</html>
