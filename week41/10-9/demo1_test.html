@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="./react/react.min.js"></script>
+    <script src="./react/react-dom.min.js"></script>
+    <script src="./react/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="a">example</div>
+    <div id="b">example2</div>
+    <div id="c">这是</div>
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('a')
+      );
+    </script>
+    <!-- <script type="text/babel" src="./test.js"></script> -->
+    <div id="content"></div>
+    <script type="text/babel">
+    var CommentBox = React.createClass({
+      render: ()=> {
+          return (
+          <div className="commentBox">
+            Hello, world! I am a CommentBox.
+          </div>
+    );
+  }
+});
+      ReactDOM.render(
+      <CommentBox />,
+      document.getElementById('content')
+  );
+</script>
+      <div id="d">d</div>
+      <script type="text/babel">
+        var Myhello = React.createClass({
+          render: ()=>{
+            return(
+              // style赋值要用双大括号
+              <span className="myspan" style={{color:'red'},{fontSize:30,color:'blue'}}>MyHello</span>
+            );
+          }
+        });
+
+        ReactDOM.render(
+          <Myhello />,
+          document.getElementById('d')  //  后边不能加分号否则报错，render要接收两个参数，以逗号分隔，不能出现别的符号
+        );
+</script>
+  </body>
+</html>

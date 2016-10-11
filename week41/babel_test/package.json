@@ -1,0 +1,17 @@
+{
+  "name": "babel_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo1_es6test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"babel dir1 -d dir3"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0"
+  }
+}
