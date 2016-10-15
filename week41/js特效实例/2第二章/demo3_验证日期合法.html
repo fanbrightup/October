@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="name" value="2008-1-31" id="input_date">
+    <br>
+    <button type="button" name="button" id="btn_check">验证</button>
+    <script type="text/javascript">
+      var input_date = document.querySelector('#input_date').value;
+      var year = input_date.split('-')[0];
+      var month = input_date.split('-')[1];
+      var day = input_date.split('-')[2];
+      if(month<1 || month >12 || day <1 || day >31){
+        alert('输入的日期非法');
+      };
+      // month的类型是string
+      console.log(typeof month+'month是')
+      switch(parseInt(month)){
+        case 1:console.log('1月'); break;
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:break;
+        // case 2:if(year % 4 == 0 || year % 100 == 0){
+        //   if(day>29)
+        //   alert('输入非法');
+        // }else{
+        //   if(day>28)
+        //   alert('输入非法');
+        // }
+        // break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+        if(d>30){
+          console.log('err');
+        }else{
+          console.log('err');
+
+        }
+        break;
+        default:
+        console.log('default');
+
+      }
+      console.log('hh')
+    </script>
+  </body>
+</html>

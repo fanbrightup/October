@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen" >
+      .bg_blue{
+        background-color: blue;
+      }
+      .bg_red{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span style="cursor:pointer">这是</span>
+    <button type="button" name="button" id="change">改变样式</button>
+    <div id="content" class="bg_blue">
+      <h1>这是标题1</h1>
+        <p>这是段落一</p>
+    </div>
+    <script type="text/javascript">
+        var btn = document.querySelector('#change');
+        var content = document.querySelector('#content');
+        btn.addEventListener('click',()=>{
+          content.className=content.className=='bg_blue'?'bg_red':'bg_blue';
+        });
+    </script>
+  </body>
+</html>

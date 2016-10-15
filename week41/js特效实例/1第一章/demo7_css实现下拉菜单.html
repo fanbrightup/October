@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .mylist{
+        display: none;
+      }
+      .show .mylist{
+        display: block;
+      }
+      .hide .mylist{
+        display: none;
+      }
+
+      .bg_blue{
+        background-color: blue;
+      }
+      .bg_red{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div  onclick="console.log('hh')" onmouseover="this.className='show bg_blue'"
+                onmouseout="this.className='hide bg_red'">
+    <button style="cursor:pointer" type="button" name="button" id="btn">太平洋电脑</button>
+    <ul class="mylist" >
+      <li>项目1</li>
+      <li>项目2</li>
+      <li>项目3</li>
+      <li>项目4</li>
+      <li>项目5</li>
+    </ul>
+  </div>
+  </body>
+</html>

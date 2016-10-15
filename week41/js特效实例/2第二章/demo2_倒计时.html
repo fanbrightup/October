@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>倒计时</title>
+  </head>
+  <body>
+    <div class="content">
+      距离今天结束还有<span id="rest_time"></span>
+    </div>
+    <script type="text/javascript">
+      function cal(){
+      var now = new Date();
+      var hours = 23 - now.getHours();
+      var minutes = 60 - now.getMinutes();
+      var seconds = 60 - now.getSeconds();
+      var rest_time = document.querySelector('#rest_time');
+      rest_time.innerHTML = hours+'小时'+minutes+'分钟'+seconds+'秒';
+    }
+      cal();
+      setInterval(cal,10);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!--不要把焦点放在会显示的那个按钮上，而是它和准备要显示的隐藏内容的父容器  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    #content{
+      display: inline-block;
+      cursor:pointer
+    }
+    #mylist{
+      display: none;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div id="content">
+    <span type="button" name="button" >太平洋电脑</span>
+    <ul id="mylist" >
+      <li><a href="#">链接</a>项目1</li>
+      <li><a href="#">链接</a>项目1</li>
+      <li><a href="#">链接</a>项目1</li>
+      <li><a href="#">链接</a>项目1</li>
+      <li><a href="#">链接</a>项目1</li>
+    </ul>
+    <script type="text/javascript">
+      var mylist = document.querySelector('#mylist');
+      var content = document.querySelector('#content');
+      content.addEventListener('mouseover',()=>{ mylist.style.display = 'block';});
+      content.addEventListener('mouseout',()=>{ mylist.style.display = 'none';});
+
+    </script>
+  </div>
+
+  </body>
+</html>
